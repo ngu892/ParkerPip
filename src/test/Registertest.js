@@ -22,7 +22,7 @@ module.exports = UserRegister;
 // Registertest.js
 const chai = require('chai');
 const expect = chai.expect;
-const UserRegister = require('./User_Register');
+const UserRegister = require('../User_Register'); // 상대 경로 수정
 
 describe('UserRegister', function() {
   let userRegister;

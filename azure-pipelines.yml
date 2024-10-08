@@ -17,8 +17,9 @@ steps:
 
 - script: |
     npm install
+    npm audit fix
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install, audit fix, and build'
 
 - script: |
     npm install mocha chai --save-dev
