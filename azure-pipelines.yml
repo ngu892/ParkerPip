@@ -20,12 +20,13 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- script: |
+    npm install mocha chai --save-dev
+    npx mocha src/test/Registertest.js
+  displayName: 'Run tests'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: 'build' 
     ArtifactName: 'drop'
   displayName: 'Publish build artifacts'
-
-- script: |
-    npm run test
-  displayName: 'Run tests'
