@@ -22,10 +22,10 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-  PathtoPublish: 'build' 
-  ArtifactName: 'drop'
+    PathtoPublish: 'build' 
+    ArtifactName: 'drop'
   displayName: 'Publish build artifacts'
 
 - script: |
     npm run test
-    displayName: 'Run tests'
+  displayName: 'Run tests'
