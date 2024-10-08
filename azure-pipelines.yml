@@ -23,8 +23,14 @@ steps:
 
 - script: |
     npm install mocha chai --save-dev
-    npx mocha src/test/Registertest.js
+    npx mocha src/test/Registertest.js --reporter mocha-junit-reporter --reporter-options mochaFile=results/test-results.xml
   displayName: 'Run tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: 'results/test-results.xml'
+    testRunTitle: 'Registertest Results'
+  displayName: 'Publish test results'
 
 - task: PublishBuildArtifacts@1
   inputs:
