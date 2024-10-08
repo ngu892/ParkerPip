@@ -22,7 +22,7 @@ steps:
   displayName: 'npm install, audit fix, and build'
 
 - script: |
-    npm test -- --testPathPattern=src/test/Registertest.js --watchAll=false --coverage
+    npm run test -- --testPathPattern=src/test/Registertest.js --watchAll=false --coverage
   displayName: 'Run React unit tests'
 
 
