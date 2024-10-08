@@ -14,7 +14,7 @@ describe('Register component', () => {
     expect(screen.getByLabelText(/Password:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Email:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Phone Number:/i)).toBeInTheDocument();
-    expect(screen.getByRole(/Register/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /register/i })).toBeInTheDocument(); 
   });
 
   it('should display success message after form submission', () => {
@@ -28,8 +28,7 @@ describe('Register component', () => {
     fireEvent.change(screen.getByLabelText(/Password:/i), { target: { value: 'password123' } });
     fireEvent.change(screen.getByLabelText(/Email:/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByLabelText(/Phone Number:/i), { target: { value: '1234567890' } });
-
-    fireEvent.click(screen.getByRole(/Register/i));
+    fireEvent.click(screen.getByRole('button', { name: /register/i }));
 
     expect(screen.getByText(/Thank you!/i)).toBeInTheDocument();
     expect(screen.getByText(/Your registration has been submitted./i)).toBeInTheDocument();
