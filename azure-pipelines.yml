@@ -20,6 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- script: |
+    npm run test
+  displayName: 'Run tests'
+
 - task: npm@1
   displayName: "JavaScript tests"
   inputs:
