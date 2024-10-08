@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Register from '@/pages/User_Register';
 
 describe('Register component', () => {
   it('should render form fields and submit button', () => {
