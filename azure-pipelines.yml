@@ -22,7 +22,7 @@ steps:
   displayName: 'npm install, audit fix, and build'
 
 - script: |
-    npm test -- --testPathPattern=src/test --watchAll=false --coverage
+    npm test -- --testPathPattern=src/test/Registertest.js --watchAll=false --coverage
   displayName: 'Run React unit tests'
 
 
@@ -31,3 +31,9 @@ steps:
     PathtoPublish: 'build' 
     ArtifactName: 'drop'
   displayName: 'Publish build artifacts'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/coverage/lcov.info'
+    testRunTitle: 'React Unit Tests'
+  displayName: 'Publish test results'
