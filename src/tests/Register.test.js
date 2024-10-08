@@ -14,7 +14,7 @@ describe('Register component', () => {
     expect(screen.getByLabelText(/Password:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Email:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Phone Number:/i)).toBeInTheDocument();
-    expect(screen.getByText(/Register/i)).toBeInTheDocument();
+    expect(screen.getByRole(/Register/i)).toBeInTheDocument();
   });
 
   it('should display success message after form submission', () => {
@@ -29,7 +29,7 @@ describe('Register component', () => {
     fireEvent.change(screen.getByLabelText(/Email:/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByLabelText(/Phone Number:/i), { target: { value: '1234567890' } });
 
-    fireEvent.click(screen.getByText(/Register/i));
+    fireEvent.click(screen.getByRole(/Register/i));
 
     expect(screen.getByText(/Thank you!/i)).toBeInTheDocument();
     expect(screen.getByText(/Your registration has been submitted./i)).toBeInTheDocument();
