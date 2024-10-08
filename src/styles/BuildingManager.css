@@ -1,0 +1,21 @@
+.checklist-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  
+  .checklist-container table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .checklist-container th,
+  .checklist-container td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }

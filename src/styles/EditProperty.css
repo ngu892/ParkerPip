@@ -1,0 +1,52 @@
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: black;
+    position: relative;
+    z-index: 99999;
+  }
+  
+  .content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .content label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

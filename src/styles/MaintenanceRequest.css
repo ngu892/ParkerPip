@@ -1,0 +1,33 @@
+.maintenance-request-container {
+    text-align: center;
+  }
+  
+  .submit-request {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .submit-request input {
+    width: 300px; 
+    height: 40px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .submit-request button {
+    width: 100px;
+    height: 40px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-request button:hover {
+    background-color: #218838;
+  }
+  

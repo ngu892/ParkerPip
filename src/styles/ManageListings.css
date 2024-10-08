@@ -1,0 +1,153 @@
+.listingsTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.manageListingsContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.propertyTabContainer {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.activeInactiveTabs {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.activeTab {
+    background: white;
+    border-bottom: 1px solid transparent;
+    font-weight: bold;
+}
+
+.activeTab::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    background: rgb(68, 144, 210);
+}
+
+.propertyContentTabs {
+    padding: 20px;
+}
+
+.propertyContent {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.activeContent {
+    display: block;
+}
+
+.noProperties {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(156, 144, 144);
+    padding: 20px;
+}
+
+.addPropertyBtn {
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: rgb(68, 144, 210);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+
+.addPropertyForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addPropertyForm input, label {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* .propertyDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.editBtn {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(68, 144, 210);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 150px;
+    margin: 5px;
+}
+
+.editBtn:hover {
+    background-color: rgb(45, 104, 156);
+}
+
+.deleteBtn {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(210, 68, 68);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 150px;
+    margin: 5px;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(180, 57, 57);
+}
+
+.completeBtn {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(210, 182, 68);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 150px;
+    margin: 5px;
+}
+
+.completeBtn:hover {
+    background-color: rgb(184, 158, 52);
+}

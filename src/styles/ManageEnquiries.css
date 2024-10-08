@@ -1,0 +1,46 @@
+.enquiriesTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.enquiryContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+}
+
+.enquiriesList {
+    flex: 1;
+    border-right: 1px solid white;
+    padding: 20px;
+}
+
+.enquiryItem {
+    cursor: pointer;
+    padding: 10px;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.enquiryItem:hover {
+    background-color: white;
+}
+
+.enquiryDetails {
+    flex: 2;
+    padding: 20px;
+    background: white;
+}
+
+.enquiryDetails h2 {
+    margin-top: 0;
+}
+
+.enquiryDetails p {
+    margin-bottom: 10px;
+}

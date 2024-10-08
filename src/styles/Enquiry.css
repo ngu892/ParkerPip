@@ -1,0 +1,57 @@
+.enquiry {
+    text-align: center;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+  
+h1 {
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.formItem {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+  
+.formItem input, .formItem textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d5cccc;
+    border-radius: 4px;
+}
+  
+.formItem textarea {
+    height: 100px;
+    resize: vertical;
+}
+  
+.submitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(204, 172, 29);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+  
+.submitBtn:hover {
+    background-color: rgb(171, 143, 22);
+}
+  
+.submittedMsg {
+    text-align: center;
+    padding: 20px;
+}

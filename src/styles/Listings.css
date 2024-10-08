@@ -1,0 +1,58 @@
+.listings {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.listings .listingsTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    padding: 40px 0px 0px;
+}
+
+.propertyList {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.propertyItem {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px;
+    padding: 5px;
+}
+
+.propertyImage {
+    width: 350px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 100px;
+}
+
+.propertyDetails {
+    padding: 30px;
+}
+
+.propertyDetails h3 {
+    font-size: 20px;
+}
+
+.enquireBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(204, 172, 29);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
