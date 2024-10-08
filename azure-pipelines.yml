@@ -20,9 +20,12 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: npm@1
-  displayName: "JavaScript tests"
+- task: PublishBuildArtifacts@1
   inputs:
-    command: 'custom'
-    workingDir: 'src'
-    customCommand: 'npm run test'
+  PathtoPublish: 'build' 
+  ArtifactName: 'drop'
+  displayName: 'Publish build artifacts'
+
+- script: |
+    npm run test
+    displayName: 'Run tests'
