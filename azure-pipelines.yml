@@ -25,4 +25,4 @@ steps:
   inputs:
     command: 'custom'
     workingDir: 'src'
-    customCommand: 'run test'
+    customCommand: 'npm run test'
