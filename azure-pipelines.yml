@@ -24,5 +24,5 @@ steps:
   displayName: "JavaScript tests"
   inputs:
     command: 'custom'
-    workingDir: 'src/App'
+    workingDir: 'src'
     customCommand: 'run test'
