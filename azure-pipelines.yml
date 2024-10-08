@@ -23,6 +23,6 @@ steps:
 - task: npm@1
   displayName: "JavaScript tests"
   inputs:
-    command: 'test'
+    command: 'script'
     workingDir: 'src/App'
     customCommand: 'run test'
