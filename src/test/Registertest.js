@@ -1,4 +1,9 @@
-// User_Register.js
+import chai from 'chai';
+import UserRegister from '../User_Register';
+import { expect } from 'chai';
+import { describe, it, beforeEach } from 'mocha';
+import React from 'react';
+
 class UserRegister {
   constructor() {
     this.users = [];
