@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Login from './User_Login';
+import Login from '../pages/User_Login';
 import '@testing-library/jest-dom';
 // We recommend installing an extension to run jest tests.
 
