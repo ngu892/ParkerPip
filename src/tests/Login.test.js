@@ -2,9 +2,16 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Login from '../pages/User_Login';
 import '@testing-library/jest-dom';
-// We recommend installing an extension to run jest tests.
 
 describe('Login Component', () => {
+  beforeEach(() => {
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    console.log.mockRestore();
+  });
+
   test('renders Login component', () => {
     render(<Login />);
     expect(screen.getByText(/Owner or Tenant Login/i)).toBeInTheDocument();
@@ -32,7 +39,6 @@ describe('Login Component', () => {
 
     fireEvent.change(userIdInput, { target: { value: 'testUser' } });
     fireEvent.change(passwordInput, { target: { value: 'testPassword' } });
-
     fireEvent.click(submitButton);
 
     expect(console.log).toHaveBeenCalledWith('Login data:', {
