@@ -1,68 +1,43 @@
-const UserLogin = require('../User_Login');
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import Login from './User_Login';
 
 // We recommend installing an extension to run jest tests.
 
-describe('UserLogin', () => {
-    test('should return true for valid credentials', () => {
-        const result = UserLogin('validUser', 'validPassword');
-        expect(result).toBe(true);
-    });
+describe('Login Component', () => {
+  test('renders Login component', () => {
+    render(<Login />);
+    expect(screen.getByText(/Owner or Tenant Login/i)).toBeInTheDocument();
+  });
 
-    test('should return false for invalid username', () => {
-        const result = UserLogin('invalidUser', 'validPassword');
-        expect(result).toBe(false);
-    });
+  test('allows user to input userId and password', () => {
+    render(<Login />);
+    
+    const userIdInput = screen.getByLabelText(/ID:/i);
+    const passwordInput = screen.getByLabelText(/Password:/i);
 
-    test('should return false for invalid password', () => {
-        const result = UserLogin('validUser', 'invalidPassword');
-        expect(result).toBe(false);
-    });
+    fireEvent.change(userIdInput, { target: { value: 'testUser' } });
+    fireEvent.change(passwordInput, { target: { value: 'testPassword' } });
 
-    test('should return false for empty username', () => {
-        const result = UserLogin('', 'validPassword');
-        expect(result).toBe(false);
-    });
+    expect(userIdInput.value).toBe('testUser');
+    expect(passwordInput.value).toBe('testPassword');
+  });
 
-    test('should return false for empty password', () => {
-        const result = UserLogin('validUser', '');
-        expect(result).toBe(false);
-    });
+  test('submits the form with userId and password', () => {
+    render(<Login />);
+    
+    const userIdInput = screen.getByLabelText(/ID:/i);
+    const passwordInput = screen.getByLabelText(/Password:/i);
+    const submitButton = screen.getByRole('button', { name: /Login/i });
 
-    test('should return false for both empty username and password', () => {
-        const result = UserLogin('', '');
-        expect(result).toBe(false);
-    });
+    fireEvent.change(userIdInput, { target: { value: 'testUser' } });
+    fireEvent.change(passwordInput, { target: { value: 'testPassword' } });
 
-    test('should return false for null username', () => {
-        const result = UserLogin(null, 'validPassword');
-        expect(result).toBe(false);
-    });
+    fireEvent.click(submitButton);
 
-    test('should return false for null password', () => {
-        const result = UserLogin('validUser', null);
-        expect(result).toBe(false);
+    expect(console.log).toHaveBeenCalledWith('Login data:', {
+      userId: 'testUser',
+      password: 'testPassword'
     });
-
-    test('should return false for both null username and password', () => {
-        const result = UserLogin(null, null);
-        expect(result).toBe(false);
-    });
-
-    test('should return false for undefined username', () => {
-        const result = UserLogin(undefined, 'validPassword');
-        expect(result).toBe(false);
-    });
-
-    test('should return false for undefined password', () => {
-        const result = UserLogin('validUser', undefined);
-        expect(result).toBe(false);
-    });
-
-    test('should return false for both undefined username and password', () => {
-        const result = UserLogin(undefined, undefined);
-        expect(result).toBe(false);
-    });
-});
-        expect(result).toBe(false);
-    });
+  });
 });
